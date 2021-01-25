@@ -4,7 +4,7 @@ Simple digital storage calculator for your projects.
 ```
 
 ## With the help of class "Converter" you can convert:
-### Digital units:
+### Decimal units:
 > - Megabytes (MB)
 > - Gigabytes (GB)
 > - Terabytes (TB)
