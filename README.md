@@ -3,8 +3,8 @@
 Simple digital storage calculator for your projects.
 ```
 
-With the help of class "Converter" you can convert:
-> Digital units:
+## With the help of class "Converter" you can convert:
+### Digital units:
 > - Megabytes (MB)
 > - Gigabytes (GB)
 > - Terabytes (TB)
@@ -13,7 +13,7 @@ With the help of class "Converter" you can convert:
 > - Zettabytes (ZB)
 > - Yottabytes (YB)
     
-> Binary units:
+### Binary units:
 > - Mebibytes (MiB)
 > - Gibibytes (GiB)
 > - Tebibytes (TiB)
