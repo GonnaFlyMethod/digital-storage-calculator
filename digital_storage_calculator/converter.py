@@ -1,12 +1,13 @@
-from byte_units.binary import (Mebibyte, Gibibyte, Tebibyte, Pebibyte, Exbibyte,
-                               Zebibyte, Yobibyte)
-from byte_units.decimal import (Megabyte, Gigabyte, Terabyte, Petabyte, Exabyte,
-                                Zettabyte, Yottabyte)
+from byte_units.binary import (Kibibyte, Mebibyte, Gibibyte, Tebibyte,
+							   Pebibyte, Exbibyte, Zebibyte, Yobibyte)
+from byte_units.decimal import (Kilobyte, Megabyte, Gigabyte, Terabyte,
+								Petabyte, Exabyte, Zettabyte, Yottabyte)
 
 class Converter:
 
 	_byte_units_methods_storage = {
 		# Binary units
+		"KiB": Kibibyte.convert_from_bytes_to_kibibytes,
 		"MiB": Mebibyte.convert_from_bytes_to_mebibytes,
 		"GiB": Gibibyte.convert_from_bytes_to_gibibytes,
 		"TiB": Tebibyte.convert_from_bytes_to_tebibytes,
@@ -15,7 +16,8 @@ class Converter:
 		"ZiB": Zebibyte.convert_from_bytes_to_zebibytes,
 		"YiB": Yobibyte.convert_from_bytes_to_yobibytes,
 			
-		# Decinal units
+		# Decimal units
+		"KB": Kilobyte.convert_from_bytes_to_kilobytes,
 		"MB": Megabyte.convert_from_bytes_to_megabytes,
 		"GB": Gigabyte.convert_from_bytes_to_gigabytes,
 		"TB": Terabyte.convert_from_bytes_to_terabytes,

@@ -1,3 +1,24 @@
+class Kibibyte:
+
+	def __init__(self, value_kibibytes: int):
+		self._value_kibibytes = value_kibibytes
+		self.one_kibibyte_in_bytes = 1024
+		self._value_bytes = self._convert_into_bytes(value_kibibytes)
+		self.id = "KiB"
+	
+	def _convert_into_bytes(self, value_kibibytes: int) -> int:
+		return value_kibibytes * self.one_kibibyte_in_bytes
+	
+	def convert_from_bytes_to_kibibytes(self, bytes: int) -> float:
+		return (bytes / self.one_kibibyte_in_bytes)
+	
+	def get_val_in_bytes(self) -> int:
+		return self._value_bytes
+	
+	def get_val_in_kibibytes(self) -> int:
+		return self._value_kibibytes
+
+
 class Mebibyte:
 
 	def __init__(self, value_mebibytes: int):

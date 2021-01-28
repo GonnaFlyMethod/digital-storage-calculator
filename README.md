@@ -5,6 +5,7 @@ Simple digital storage calculator for your projects.
 
 ## With the help of class "Converter" you can convert:
 ### Decimal units:
+> - Kilobytes (KB)
 > - Megabytes (MB)
 > - Gigabytes (GB)
 > - Terabytes (TB)
@@ -14,6 +15,7 @@ Simple digital storage calculator for your projects.
 > - Yottabytes (YB)
     
 ### Binary units:
+> - Kibibytes (KiB)
 > - Mebibytes (MiB)
 > - Gibibytes (GiB)
 > - Tebibytes (TiB)

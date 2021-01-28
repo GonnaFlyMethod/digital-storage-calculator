@@ -1,3 +1,23 @@
+class Kilobyte:
+	def __init__(self, value_kilobytes: int):
+		self._value_kilobytes = value_kilobytes
+		self.one_kilobyte_in_bytes = 1000
+		self._value_bytes = self._convert_into_bytes(value_kilobytes)
+		self.id = "KB"
+	
+	def _convert_into_bytes(self, value_kilobytes: int) -> int:
+		return value_kilobytes * self.one_kilobyte_in_bytes
+	
+	def convert_from_bytes_to_kilobytes(self, bytes: int) -> float:
+		return (bytes / self.one_kilobyte_in_bytes)
+	
+	def get_val_in_bytes(self) -> int:
+		return self._value_bytes
+	
+	def get_val_in_kilobytes(self) -> int:
+		return self._value_kilobytes
+
+
 class Megabyte:
 
 	def __init__(self, value_megabytes: int):
