@@ -4,12 +4,9 @@ Simple digital storage calculator for your projects.
 ```
 
 # With the help of class "Converter" you can convert:
-
 ## 1) Simple units:
 > - Bits (b)
 > - Bytes (B)
-
-============================
 
 ## 2) Binary units:
 
@@ -31,8 +28,6 @@ Simple digital storage calculator for your projects.
 > - Exbibytes (EiB)
 > - Zebibytes (ZiB)
 > - Yobibytes (YiB)
-
-============================
 
 ## 3) Decimal units:
 
