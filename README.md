@@ -3,18 +3,25 @@
 Simple digital storage calculator for your projects.
 ```
 
-## With the help of class "Converter" you can convert:
-### Decimal units:
-> - Kilobytes (KB)
-> - Megabytes (MB)
-> - Gigabytes (GB)
-> - Terabytes (TB)
-> - Petabytes (PB)
-> - Exabytes (EB)
-> - Zettabytes (ZB)
-> - Yottabytes (YB)
-    
-### Binary units:
+# With the help of class "Converter" you can convert:
+
+## 1) Simple units:
+> - Bits (b)
+> - Bytes (B)
+============================
+
+## 2) Binary units:
+
+### 2.1) Based on bits:
+> - Kibibits (Kibit)
+> - Mebibits (Mibit)
+> - Gibibits (Gibit)
+> - Tebibits (Tibit)
+> - Pebibits (Pibit)
+> - Exbibits (Eibit)
+> - Zebibits (Zibit)
+> - Yobibits (Yibit)
+### 2.2) Based on bytes:
 > - Kibibytes (KiB)
 > - Mebibytes (MiB)
 > - Gibibytes (GiB)
@@ -23,7 +30,25 @@ Simple digital storage calculator for your projects.
 > - Exbibytes (EiB)
 > - Zebibytes (ZiB)
 > - Yobibytes (YiB)
-    
-# Also...
-! If you need to convert some of thouse units into bytes then just use 'get_val_in_bytes'. Each unit class has that method.
-  
+============================
+
+## 3) Decimal units:
+
+### 3.1) Based on bits:
+> - Kilobits (kbit)
+> - Megabits (Mbit)
+> - Gigabits (Gbit)
+> - Terabits (Tbit)
+> - Petabits (Pbit)
+> - Exabits (Ebit)
+> - Zettabits (Zbit)
+> - Yottabits (Ybit)
+### 3.2) Based on bytes:
+> - Kilobytes (KB)
+> - Megabytes (MB)
+> - Gigabytes (GB)
+> - Terabytes (TB)
+> - Petabytes (PB)
+> - Exabytes (EB)
+> - Zettabytes (ZB)
+> - Yottabytes (YB)
