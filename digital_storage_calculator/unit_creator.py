@@ -63,18 +63,3 @@ class DataUnitCreator:
 		"YB": Yottabyte
 		
 	}
-
-	@classmethod
-	def convert(cls, value_from, value_to, return_in_bits=False):
-		value_from_in_bits = value_from.get_val_in_bits()
-
-		if value_to.id == "bit":
-			result_scientific_notation = "%.2e" % value_from_in_bits
-			return result_scientific_notation
-		else:
-			method_for_conversion = cls.data_units_methods_storage[value_to.id]
-			final_result = method_for_conversion(value_to, value_from_in_bits)
-
-			if return_in_bits:
-				return value_from._convert_into_bits(final_result)
-			return final_result
