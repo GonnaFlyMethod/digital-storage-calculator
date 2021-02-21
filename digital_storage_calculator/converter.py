@@ -13,7 +13,7 @@ from data_units.decimal_based_on_bytes_units import (Kilobyte, Megabyte, Gigabyt
 
 class Converter:
 	
-	_byte_units_methods_storage = {
+	data_units_methods_storage = {
 	# 1) Simple units
 		"B": Byte.convert_from_bits_to_bytes,
 
@@ -72,7 +72,7 @@ class Converter:
 			result_scientific_notation = "%.2e" % value_from_in_bits
 			return result_scientific_notation
 		else:
-			method_for_conversion = cls._byte_units_methods_storage[value_to.id]
+			method_for_conversion = cls.data_units_methods_storage[value_to.id]
 			final_result = method_for_conversion(value_to, value_from_in_bits)
 
 			if return_in_bits:
