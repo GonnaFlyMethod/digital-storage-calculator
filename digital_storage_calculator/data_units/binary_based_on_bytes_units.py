@@ -28,7 +28,7 @@ class Mebibyte:
 		self.id = "MiB"
 	
 	def _convert_into_bits(self, value_mebibytes: int) -> int:
-		return value_mebibytes * self.one_mebibyte_in_bytes
+		return value_mebibytes * self.one_mebibyte_in_bits
 	
 	def convert_from_bits_to_mebibytes(self, bits: int) -> float:
 		return (bits / self.one_mebibyte_in_bits)
@@ -106,7 +106,7 @@ class Pebibyte:
 class Exbibyte:
 
 	def __init__(self, value_exbibytes: int):
-		self._value_exbibytes = value_exabytes
+		self._value_exbibytes = value_exbibytes
 		self.one_exbibyte_in_bits = 9.223e+18
 		self._value_bits = self._convert_into_bits(value_exbibytes)
 		self.id = "EiB"
@@ -133,7 +133,7 @@ class Zebibyte:
 		self.id = "ZiB"
 	
 	def _convert_into_bits(self, value_zettabytes: int) -> int:
-		return value_zettabytes * self.one_zebibyte_in_bytes
+		return value_zettabytes * self.one_zebibyte_in_bits
 	
 	def convert_from_bits_to_zebibytes(self, bits: int) -> float:
 		return (bits / self.one_zebibyte_in_bits)

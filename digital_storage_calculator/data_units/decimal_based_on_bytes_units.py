@@ -65,7 +65,7 @@ class Terabyte:
 	def __init__(self, value_terabytes: int):
 		self._value_terabytes = value_terabytes
 		self.one_terabyte_in_bits = 8e+12
-		self._value_bits = self._convert_into_bytes(value_terabytes)
+		self._value_bits = self._convert_into_bits(value_terabytes)
 		self.id = "TB"
 	
 	def _convert_into_bits(self, value_terabytes: int) -> int:

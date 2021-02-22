@@ -8,7 +8,11 @@ root = Tk()
 value_to_convert_global = StringVar()
 
 root.title("Digital storage calculator")
-root.geometry("280x280");
+root.geometry("230x260");
+root.resizable(False, False) 
+
+photo = PhotoImage(file = "icon.png")
+root.iconphoto(False, photo)
 
 LIST_FROM_POSSIBLE_UNITS = ["b"] + list(Converter.data_units_methods_storage.keys())
 LIST_TO_POSSIBLE_UNITS = LIST_FROM_POSSIBLE_UNITS.copy()
@@ -20,7 +24,7 @@ convert_from = None
 convert_to = None
 answer = None
 answer_text_var = StringVar()
-answer_text_var.set('Answer: ')
+answer_text_var.set("Answer:")
 
 def from_selection_callback(selection):
 	global convert_from
@@ -35,8 +39,14 @@ def convertation():
 	global answer, value_to_convert_global, answer_text
 	from_unit = None
 	to_unit = None
+	value_to_convert = None
 
-	value_to_convert = float(value_to_convert_global.get())
+	try:
+		value_to_convert = float(value_to_convert_global.get())
+	except ValueError:
+		answer_text_var.set("Value to convert isn't valid")
+		return
+
 	if convert_from == "b":
 		from_unit = Bit(value_to_convert)
 	else:
@@ -51,32 +61,32 @@ def convertation():
 	res_of_convertation = Converter.convert(from_unit, to_unit)
 	
 	
-	answer_GUI = f"Answer: {res_of_convertation}"
+	answer_GUI = f"{value_to_convert}({convert_from}) = {res_of_convertation}({convert_to})"
 	answer_text_var.set(answer_GUI)
 
 
-from_text = Label(root, text="Convert from").place(x=10, y=30)
+from_text = Label(root, text="Convert from - ").place(x=20, y=10)
 
 default_val_of_option_menu_from = StringVar(root)
-default_val_of_option_menu_from.set(LIST_FROM_POSSIBLE_UNITS[0]) # default value from
+# default_val_of_option_menu_from.set(LIST_FROM_POSSIBLE_UNITS[0]) # default value from
 
 
 optionMenuFrom = OptionMenu(root, default_val_of_option_menu_from, *LIST_FROM_POSSIBLE_UNITS,
-                            command=from_selection_callback).place(x=100, y=25)
+                            command=from_selection_callback).place(x=110, y=5)
 
-value_for_convertation = Label(root, text="Value for convertation").place(x=10, y=65)
+value_for_convertation = Label(root, text="Value for convertation").place(x=20, y=45)
 
-entry_value_for_convertation = Entry(root, textvariable=value_to_convert_global, width=40).place(x=10, y=100)
+entry_value_for_convertation = Entry(root, textvariable=value_to_convert_global, width=30).place(x=20, y=80)
 
-to_text = Label(root, text="Convert to").place(x=10, y=140)
+to_text = Label(root, text="Convert to - ").place(x=20, y=120)
 
 default_val_of_option_menu_to = StringVar(root)
-default_val_of_option_menu_to.set(LIST_TO_POSSIBLE_UNITS[1]) # default value to
+#default_val_of_option_menu_to.set(LIST_TO_POSSIBLE_UNITS[1]) # default value to
 
 optionMenuTo = OptionMenu(root, default_val_of_option_menu_to, *LIST_TO_POSSIBLE_UNITS,
-                          command=to_selection_callback).place(x=99, y=135)
+                          command=to_selection_callback).place(x=110, y=115)
 
-calculate_button = Button(root, text = "Calculate!", command=convertation).place(x=10, y=180)
-answer_text = Label(root, textvariable=answer_text_var).place(x=10, y=220)
+calculate_button = Button(root, text = "Calculate!", command=convertation).place(x=20, y=160)
+answer_text = Label(root, textvariable=answer_text_var).place(x=10, y=200)
 
 root.mainloop()
